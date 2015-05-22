@@ -17,6 +17,9 @@ class GreenEggsAndHam
   def sorted_unique_words
     words.uniq.sort
   end
-end
 
+  def number_of_words_shorter_than(len)
+    words.reject { |i| i.length >= len }.count
+  end  
+end
 
