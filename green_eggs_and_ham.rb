@@ -20,6 +20,10 @@ class GreenEggsAndHam
 
   def number_of_words_shorter_than(len)
     words.reject { |i| i.length >= len }.count
+  end
+
+  def longest_word
+    words.max_by { |x| x.length}
   end  
 end
 
