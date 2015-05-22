@@ -25,5 +25,12 @@ class GreenEggsAndHam
   def longest_word
     words.max_by { |x| x.length}
   end  
+
+  def frequency_of_unique_words
+    words.each_with_object(Hash.new(0)) { |word, counts| counts[word] += 1 }
+  end
+      
+ 
+  
 end
 
